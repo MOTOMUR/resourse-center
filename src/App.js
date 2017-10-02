@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {BrowserRouter,Route,Link} from 'react-router-dom'
+import {BrowserRouter,Route,NavLink} from 'react-router-dom'
 import AppBar from 'material-ui/AppBar';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
@@ -38,13 +38,13 @@ class App extends Component {
               onRequestChange={open => this.setState({ open })}
             >
 
-              <Link to='/'><MenuItem onTouchTap={this.handleClose}>
+              <NavLink to='/'><MenuItem onTouchTap={this.handleClose}>
                 Home
-              </MenuItem></Link>
+              </MenuItem></NavLink>
 
-              <Link to='/regist'><MenuItem onTouchTap={this.handleClose}>
+              <NavLink to='/regist'><MenuItem onTouchTap={this.handleClose}>
                 registeration
-              </MenuItem></Link>
+              </MenuItem></NavLink>
 
             </Drawer>
 
